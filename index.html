@@ -4,7 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>TIPRASA SMM PANEL</title>
+
 <link rel="stylesheet" href="style.css">
+
+<script type="module" src="firebase.js"></script>
+<script defer src="script.js"></script>
 </head>
 
 <body>
@@ -18,43 +22,69 @@
 <a href="#">Home</a>
 <a href="#">Services</a>
 <a href="#">Wallet</a>
+<a href="#">Orders</a>
 <a href="#">Login</a>
 </nav>
 
 <section class="hero">
 <h2>Grow Your Social Media</h2>
-<p>Instagram • YouTube • Facebook • Telegram Services</p>
-<button>Order Now</button>
+<p>Instagram • YouTube • Facebook • Telegram</p>
+
+<button id="loginBtn">Login</button>
+<button id="registerBtn">Register</button>
 </section>
 
 <section class="services">
+
 <div class="card">
 <h3>Instagram Followers</h3>
 <p>Starting ₹80 / 1K</p>
+<button>Order</button>
 </div>
 
 <div class="card">
 <h3>YouTube Views</h3>
 <p>Fast Delivery</p>
+<button>Order</button>
 </div>
 
 <div class="card">
 <h3>Facebook Likes</h3>
 <p>Premium Quality</p>
+<button>Order</button>
 </div>
 
 <div class="card">
 <h3>Telegram Members</h3>
 <p>Instant Start</p>
+<button>Order</button>
 </div>
+
+</section>
+
+<section class="dashboard">
+
+<h2>User Dashboard</h2>
+
+<p><b>Name:</b> <span id="username">Guest</span></p>
+
+<p><b>Email:</b> <span id="email">Not Logged In</span></p>
+
+<p><b>Wallet:</b> ₹<span id="wallet">0</span></p>
+
+<button id="logoutBtn">Logout</button>
+
 </section>
 
 <footer>
-<p>© 2026 TIPRASA SMM PANEL</p>
-<p>Instagram: @juwel_tiprasa00</p>
-<p>Phone: 6909461661</p>
+
+<p>©2026 TIPRASA SMM PANEL</p>
+
+<p>Instagram : @juwel_tiprasa00</p>
+
+<p>Phone : 6909461661</p>
+
 </footer>
 
-<script src="script.js"></script>
 </body>
 </html>

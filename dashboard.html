@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>TIPRASA SMM PANEL</h1>
+</header>
+
+<div class="dashboard">
+<h2>Welcome</h2>
+
+<p>Email: <span id="userEmail">Loading...</span></p>
+
+<h3>Wallet Balance</h3>
+<h2>₹0</h2>
+
+<button onclick="location.href='index.html'">Services</button>
+<button id="logoutBtn">Logout</button>
+</div>
+
+<script type="module">
+import { auth } from "./firebase.js";
+import { onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-auth.js";
+
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    document.getElementById("userEmail").innerText = user.email;
+  } else {
+    window.location.href = "login.html";
+  }
+});
+
+document.getElementById("logoutBtn").onclick = async () => {
+  await signOut(auth);
+  window.location.href = "login.html";
+};
+</script>
+
+</body>
+</html>
